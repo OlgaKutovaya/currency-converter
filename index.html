@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form class="form-wrapper">
+    <h1 class="heading">Currency converter</h1>
+    <div class="wrapper">
+        <label>
+            Enter amount
+            <input type="number" min="1" required id="inputMoney">
+        </label>
+        <label>
+            <select id="selectCurrency">
+                <option value="none">Choose currency</option>
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="gbr">GBR</option>
+                <option value="aud">AUD</option>
+                <option value="cad">CAD</option>
+            </select>
+        </label>
+    </div>
+    <div class="wrapper">
+        <label>
+            <input type="radio" name="currency-transaction" value="buy" id="buy" checked>
+            buy currency
+        </label>
+        <label>
+            <input type="radio" name="currency-transaction" value="sell" id="sell">
+            sell currency
+        </label>
+    </div>
+    <div class="wrapper">
+        <button class="btn-cla" id="btnCalculate">calculate</button>
+        <button class="btn-cla" type="reset">reset</button>
+    </div>
+    <div class="wrapper result-wrapper">
+        <p>Conversion result is</p>
+        <p id="resultInfo"></p>
+        <p>UAH</p>
+    </div>
+</form>
+<script src="js.js"></script>
+</body>
+</html>
